@@ -10,14 +10,14 @@ import os
 import typing
 
 load_dotenv()
-HOST: typing.Final = os.getenv("HOST")
-USER: typing.Final = os.getenv("USER")
-PASSWORD: typing.Final = os.getenv("PASSWORD")
-DATABASE: typing.Final = os.getenv("DATABASE")
+SCHOOL_HOST: typing.Final = os.getenv("SCHOOL_HOST")
+SCHOOL_USER: typing.Final = os.getenv("SCHOOL_USER")
+SCHOOL_PASSWORD: typing.Final = os.getenv("SCHOOL_PASSWORD")
+SCHOOL_DATABASE: typing.Final = os.getenv("SCHOOL_DATABASE")
 
 
 class DatabaseConnection:
-    def __init__(self, host=HOST, user=USER, password=PASSWORD, database=DATABASE):
+    def __init__(self, host=SCHOOL_HOST, user=SCHOOL_USER, password=SCHOOL_PASSWORD, database=SCHOOL_DATABASE):
         self.host = host
         self.user = user
         self.password = password
